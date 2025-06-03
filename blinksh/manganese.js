@@ -1,7 +1,9 @@
-[
-{
-“name”: “Manganese Deadline Dark”,
-“type”: “dark”,
+// Manganese Deadline theme for Blink Shell
+// Based on the Manganese Deadline Zed theme
+
+const manganeseDark = {
+name: “Manganese Deadline Dark”,
+type: “dark”,
 “background-color”: “#1f1f1f”,
 “foreground-color”: “#e8e8e8”,
 “cursor-color”: “#ff9248”,
@@ -23,10 +25,11 @@
 “ansi-bright-magenta-color”: “#ff9248”,
 “ansi-bright-cyan-color”: “#3aa99f”,
 “ansi-bright-white-color”: “#f0f0f0”
-},
-{
-“name”: “Manganese Deadline Light”,
-“type”: “light”,
+};
+
+const manganeseLight = {
+name: “Manganese Deadline Light”,
+type: “light”,
 “background-color”: “#f8f5f0”,
 “foreground-color”: “#232323”,
 “cursor-color”: “#ff7900”,
@@ -48,5 +51,7 @@
 “ansi-bright-magenta-color”: “#ff9248”,
 “ansi-bright-cyan-color”: “#4aa3a4”,
 “ansi-bright-white-color”: “#454545”
-}
-]
+};
+
+// Export both themes
+export { manganeseDark, manganeseLight };
