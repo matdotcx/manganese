@@ -1,57 +1,33 @@
-// Manganese Deadline theme for Blink Shell
+// Manganese Deadline Dark theme for Blink Shell
 // Based on the Manganese Deadline Zed theme
 
-const manganeseDark = {
-name: “Manganese Deadline Dark”,
-type: “dark”,
-“background-color”: “#1f1f1f”,
-“foreground-color”: “#e8e8e8”,
-“cursor-color”: “#ff9248”,
-“cursor-text-color”: “#1f1f1f”,
-“selection-background-color”: “#ff924830”,
-“ansi-black-color”: “#1f1f1f”,
-“ansi-red-color”: “#d14d41”,
-“ansi-green-color”: “#879a39”,
-“ansi-yellow-color”: “#d0a215”,
-“ansi-blue-color”: “#4385be”,
-“ansi-magenta-color”: “#ff9248”,
-“ansi-cyan-color”: “#3aa99f”,
-“ansi-white-color”: “#e8e8e8”,
-“ansi-bright-black-color”: “#525561”,
-“ansi-bright-red-color”: “#d14d41”,
-“ansi-bright-green-color”: “#879a39”,
-“ansi-bright-yellow-color”: “#d0a215”,
-“ansi-bright-blue-color”: “#4385be”,
-“ansi-bright-magenta-color”: “#ff9248”,
-“ansi-bright-cyan-color”: “#3aa99f”,
-“ansi-bright-white-color”: “#f0f0f0”
-};
+// Define the 16 color palette
+black       = ‘#1f1f1f’;   // background
+red         = ‘#d14d41’;   // red
+green       = ‘#879a39’;   // green
+yellow      = ‘#d0a215’;   // yellow
+blue        = ‘#4385be’;   // blue
+magenta     = ‘#ff9248’;   // orange/magenta
+cyan        = ‘#3aa99f’;   // cyan
+white       = ‘#e8e8e8’;   // light gray
 
-const manganeseLight = {
-name: “Manganese Deadline Light”,
-type: “light”,
-“background-color”: “#f8f5f0”,
-“foreground-color”: “#232323”,
-“cursor-color”: “#ff7900”,
-“cursor-text-color”: “#f8f5f0”,
-“selection-background-color”: “#ff790030”,
-“ansi-black-color”: “#f8f5f0”,
-“ansi-red-color”: “#af3029”,
-“ansi-green-color”: “#66800b”,
-“ansi-yellow-color”: “#966307”,
-“ansi-blue-color”: “#3a94c5”,
-“ansi-magenta-color”: “#ff7900”,
-“ansi-cyan-color”: “#3f8687”,
-“ansi-white-color”: “#232323”,
-“ansi-bright-black-color”: “#6f6e69”,
-“ansi-bright-red-color”: “#d36151”,
-“ansi-bright-green-color”: “#7d994c”,
-“ansi-bright-yellow-color”: “#b88339”,
-“ansi-bright-blue-color”: “#4385be”,
-“ansi-bright-magenta-color”: “#ff9248”,
-“ansi-bright-cyan-color”: “#4aa3a4”,
-“ansi-bright-white-color”: “#454545”
-};
+lightBlack  = ‘#525561’;   // medium gray
+lightRed    = ‘#d14d41’;   // bright red
+lightGreen  = ‘#879a39’;   // bright green
+lightYellow = ‘#d0a215’;   // bright yellow
+lightBlue   = ‘#4385be’;   // bright blue
+lightMagenta= ‘#ff9248’;   // bright orange/magenta
+lightCyan   = ‘#3aa99f’;   // bright cyan
+lightWhite  = ‘#f0f0f0’;   // white
 
-// Export both themes
-export { manganeseDark, manganeseLight };
+// Set the color palette
+t.prefs_.set(‘color-palette-overrides’,
+[ black , red     , green  , yellow,
+blue     , magenta , cyan   , white,
+lightBlack   , lightRed  , lightGreen , lightYellow,
+lightBlue    , lightMagenta  , lightCyan  , lightWhite ]);
+
+// Set cursor, foreground and background colors
+t.prefs_.set(‘cursor-color’, ‘#ff9248’);
+t.prefs_.set(‘foreground-color’, ‘#e8e8e8’);
+t.prefs_.set(‘background-color’, ‘#1f1f1f’);
