@@ -1,0 +1,1409 @@
+/* Manganese Theme for Obsidian */
+/* Based on Manganese Deadline theme values */
+
+/* Dark Theme Colors */
+.theme-dark {
+  /* Primary colors */
+  --color-accent: #ff9248;
+  --color-accent-1: #ff9248;
+  --color-accent-2: #ff924880;
+  
+  /* Background colors */
+  --color-base-00: #1f1f1f;  /* Main background */
+  --color-base-05: #1a1a1a;  /* Darker background (panels, status bar) */
+  --color-base-10: #232323;  /* Elevated surfaces */
+  --color-base-20: #2a2a2a;  /* Hover state */
+  --color-base-25: #313131;  /* Active/selected state */
+  --color-base-30: #323232;  /* Borders */
+  --color-base-35: #393939;  /* Stronger borders */
+  --color-base-40: #3a3a3a;  /* Invisible elements */
+  --color-base-50: #4e5a5f;  /* Line numbers */
+  --color-base-60: #525561;  /* Disabled text */
+  --color-base-70: #878580;  /* Comments */
+  --color-base-100: #e8e8e8; /* Main text */
+  
+  /* Text colors */
+  --text-normal: #e8e8e8;
+  --text-muted: #878e98;
+  --text-faint: #525561;
+  --text-on-accent: #1f1f1f;
+  --text-on-accent-inverted: #e8e8e8;
+  --text-error: #d14d41;
+  --text-warning: #d0a215;
+  --text-success: #879a39;
+  --text-selection: rgba(255, 146, 72, 0.3);
+  --text-highlight-bg: rgba(255, 146, 72, 0.3);
+  --text-highlight-bg-active: rgba(255, 146, 72, 0.4);
+  
+  /* Interactive colors */
+  --interactive-normal: #2a2a2a;
+  --interactive-hover: #313131;
+  --interactive-accent: #ff9248;
+  --interactive-accent-hover: #ff924880;
+  
+  /* Background colors */
+  --background-primary: #1f1f1f;
+  --background-primary-alt: #1a1a1a;
+  --background-secondary: #1a1a1a;
+  --background-secondary-alt: #232323;
+  --background-modifier-border: #323232;
+  --background-modifier-border-hover: #393939;
+  --background-modifier-border-focus: #ff924860;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-success: #879a3920;
+  --background-modifier-error: #d14d4120;
+  --background-modifier-error-hover: #d14d4130;
+  --background-modifier-cover: rgba(31, 31, 31, 0.8);
+  --background-modifier-hover: rgba(255, 146, 72, 0.05);
+  --background-modifier-active-hover: rgba(255, 146, 72, 0.15);
+  --background-modifier-revealed: rgba(255, 146, 72, 0.05);
+  --background-modifier-selected: rgba(255, 146, 72, 0.1);
+  
+  /* Scrollbar */
+  --scrollbar-bg: rgba(135, 133, 128, 0.05);
+  --scrollbar-thumb-bg: rgba(135, 133, 128, 0.4);
+  --scrollbar-active-thumb-bg: rgba(135, 133, 128, 0.6);
+  
+  /* Syntax highlighting */
+  --code-normal: #e8e8e8;
+  --code-comment: #878580;
+  --code-function: #4385be;
+  --code-important: #ff9248;
+  --code-keyword: #ff9248;
+  --code-operator: #4385be;
+  --code-property: #4385be;
+  --code-punctuation: #878e98;
+  --code-string: #879a39;
+  --code-tag: #ff9248;
+  --code-value: #d0a215;
+  
+  /* Extended syntax colors */
+  --color-red: #d14d41;
+  --color-orange: #ff9248;
+  --color-yellow: #d0a215;
+  --color-green: #879a39;
+  --color-cyan: #3aa99f;
+  --color-blue: #4385be;
+  --color-purple: #ff9248;
+  --color-pink: #ff9248;
+  
+  /* Links */
+  --link-color: #4385be;
+  --link-color-hover: #4385be;
+  --link-external-color: #4385be;
+  --link-external-color-hover: #4385be;
+  --link-unresolved-color: #878e98;
+  --link-unresolved-opacity: 0.7;
+  
+  /* Lists */
+  --list-marker-color: #ff9248;
+  --list-marker-color-hover: #ff9248;
+  --list-marker-color-collapsed: #878e98;
+  --list-spacing: 2px;
+  
+  /* Checkboxes */
+  --checkbox-color: #ff9248;
+  --checkbox-color-hover: #ff9248;
+  --checkbox-border-color: #878e98;
+  --checkbox-border-color-hover: #ff9248;
+  
+  /* Tables */
+  --table-header-background: #232323;
+  --table-header-background-hover: #2a2a2a;
+  --table-row-even-background: #1a1a1a;
+  --table-row-odd-background: #1f1f1f;
+  --table-row-background-hover: #2a2a2a;
+  
+  /* Tags */
+  --tag-color: #ff9248;
+  --tag-background: rgba(255, 146, 72, 0.1);
+  --tag-background-hover: rgba(255, 146, 72, 0.2);
+  
+  /* Titles and headings */
+  --h1-color: #ff9248;
+  --h2-color: #4385be;
+  --h3-color: #879a39;
+  --h4-color: #3aa99f;
+  --h5-color: #d0a215;
+  --h6-color: #d14d41;
+  --h1-size: 2em;
+  --h2-size: 1.6em;
+  --h3-size: 1.37em;
+  --h4-size: 1.25em;
+  --h5-size: 1.12em;
+  --h6-size: 1.03em;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  
+  /* Editor */
+  --cursor-color: #ff9248;
+  --selection-color: rgba(255, 146, 72, 0.3);
+}
+
+/* Light Theme Colors */
+.theme-light {
+  /* Primary colors */
+  --color-accent: #ff7900;
+  --color-accent-1: #ff7900;
+  --color-accent-2: #ff790080;
+  
+  /* Background colors */
+  --color-base-00: #f8f5f0;  /* Main background */
+  --color-base-05: #efefef;  /* Lighter background (panels, status bar) */
+  --color-base-10: #ebebec;  /* Elevated surfaces */
+  --color-base-20: #e4e1dc;  /* Hover state */
+  --color-base-25: #dad7d2;  /* Active/selected state */
+  --color-base-30: #e6e3de;  /* Borders */
+  --color-base-35: #dad7d2;  /* Stronger borders */
+  --color-base-40: #dad7d2;  /* Invisible elements */
+  --color-base-50: #b4b4bb;  /* Line numbers */
+  --color-base-60: #b4b4bb;  /* Disabled text */
+  --color-base-70: #6f6e69;  /* Comments */
+  --color-base-100: #232323; /* Main text */
+  
+  /* Text colors */
+  --text-normal: #232323;
+  --text-muted: #6f6e69;
+  --text-faint: #b4b4bb;
+  --text-on-accent: #f8f5f0;
+  --text-on-accent-inverted: #232323;
+  --text-error: #af3029;
+  --text-warning: #966307;
+  --text-success: #66800b;
+  --text-selection: rgba(255, 121, 0, 0.2);
+  --text-highlight-bg: rgba(255, 121, 0, 0.2);
+  --text-highlight-bg-active: rgba(255, 121, 0, 0.3);
+  
+  /* Interactive colors */
+  --interactive-normal: #e4e1dc;
+  --interactive-hover: #dad7d2;
+  --interactive-accent: #ff7900;
+  --interactive-accent-hover: #ff790080;
+  
+  /* Background colors */
+  --background-primary: #f8f5f0;
+  --background-primary-alt: #efefef;
+  --background-secondary: #efefef;
+  --background-secondary-alt: #ebebec;
+  --background-modifier-border: #e6e3de;
+  --background-modifier-border-hover: #dad7d2;
+  --background-modifier-border-focus: #ff790060;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #66800b20;
+  --background-modifier-error: #af302920;
+  --background-modifier-error-hover: #af302930;
+  --background-modifier-cover: rgba(248, 245, 240, 0.8);
+  --background-modifier-hover: rgba(255, 121, 0, 0.05);
+  --background-modifier-active-hover: rgba(255, 121, 0, 0.15);
+  --background-modifier-revealed: rgba(255, 121, 0, 0.05);
+  --background-modifier-selected: rgba(255, 121, 0, 0.1);
+  
+  /* Scrollbar */
+  --scrollbar-bg: rgba(111, 110, 105, 0.05);
+  --scrollbar-thumb-bg: rgba(111, 110, 105, 0.4);
+  --scrollbar-active-thumb-bg: rgba(111, 110, 105, 0.6);
+  
+  /* Syntax highlighting */
+  --code-normal: #232323;
+  --code-comment: #6f6e69;
+  --code-function: #3a94c5;
+  --code-important: #ff7900;
+  --code-keyword: #ff7900;
+  --code-operator: #3a94c5;
+  --code-property: #3a94c5;
+  --code-punctuation: #6f6e69;
+  --code-string: #66800b;
+  --code-tag: #ff7900;
+  --code-value: #966307;
+  
+  /* Extended syntax colors */
+  --color-red: #af3029;
+  --color-orange: #ff7900;
+  --color-yellow: #966307;
+  --color-green: #66800b;
+  --color-cyan: #3f8687;
+  --color-blue: #3a94c5;
+  --color-purple: #ff7900;
+  --color-pink: #ff7900;
+  
+  /* Links */
+  --link-color: #3a94c5;
+  --link-color-hover: #3a94c5;
+  --link-external-color: #3a94c5;
+  --link-external-color-hover: #3a94c5;
+  --link-unresolved-color: #6f6e69;
+  --link-unresolved-opacity: 0.7;
+  
+  /* Lists */
+  --list-marker-color: #ff7900;
+  --list-marker-color-hover: #ff7900;
+  --list-marker-color-collapsed: #6f6e69;
+  --list-spacing: 2px;
+  
+  /* Checkboxes */
+  --checkbox-color: #ff7900;
+  --checkbox-color-hover: #ff7900;
+  --checkbox-border-color: #6f6e69;
+  --checkbox-border-color-hover: #ff7900;
+  
+  /* Tables */
+  --table-header-background: #ebebec;
+  --table-header-background-hover: #e4e1dc;
+  --table-row-even-background: #efefef;
+  --table-row-odd-background: #f8f5f0;
+  --table-row-background-hover: #e4e1dc;
+  
+  /* Tags */
+  --tag-color: #ff7900;
+  --tag-background: rgba(255, 121, 0, 0.1);
+  --tag-background-hover: rgba(255, 121, 0, 0.2);
+  
+  /* Titles and headings */
+  --h1-color: #ff7900;
+  --h2-color: #3a94c5;
+  --h3-color: #66800b;
+  --h4-color: #3f8687;
+  --h5-color: #966307;
+  --h6-color: #af3029;
+  --h1-size: 2em;
+  --h2-size: 1.6em;
+  --h3-size: 1.37em;
+  --h4-size: 1.25em;
+  --h5-size: 1.12em;
+  --h6-size: 1.03em;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 600;
+  --h4-weight: 600;
+  --h5-weight: 600;
+  --h6-weight: 600;
+  
+  /* Editor */
+  --cursor-color: #ff7900;
+  --selection-color: rgba(255, 121, 0, 0.2);
+}
+
+/* Common Styles */
+body {
+  /* Border radius - keeping the sharp edges from original */
+  --radius-s: 0px;
+  --radius-m: 0px;
+  --radius-l: 0px;
+  --input-radius: 0px;
+  --tab-radius-active: 0px;
+  --checkbox-radius: 0px;
+  --toggle-radius: 0px;
+  --toggle-thumb-radius: 0px;
+  --slider-thumb-radius: 0px;
+  
+  /* Font */
+  --font-interface: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-text: var(--font-interface);
+  --font-monospace: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+}
+
+/* Tab styling - remove rounded corners */
+.workspace-tab-header.is-active::before, 
+.workspace-tab-header.is-active::after {
+  display: none;
+}
+
+/* SVG styling - sharp corners */
+svg * {
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  rx: 0;
+  ry: 0;
+}
+
+/* Menu styling */
+.menu {
+  padding: var(--size-2-1);
+}
+
+.menu-item {
+  padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+  margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+/* Active line highlighting */
+.cm-active.cm-line {
+  background-color: var(--background-secondary);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--text-selection);
+}
+
+/* Heading colors */
+.markdown-rendered h1,
+.cm-header-1 {
+  color: var(--h1-color);
+  font-size: var(--h1-size);
+  font-weight: var(--h1-weight);
+}
+
+.markdown-rendered h2,
+.cm-header-2 {
+  color: var(--h2-color);
+  font-size: var(--h2-size);
+  font-weight: var(--h2-weight);
+}
+
+.markdown-rendered h3,
+.cm-header-3 {
+  color: var(--h3-color);
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
+}
+
+.markdown-rendered h4,
+.cm-header-4 {
+  color: var(--h4-color);
+  font-size: var(--h4-size);
+  font-weight: var(--h4-weight);
+}
+
+.markdown-rendered h5,
+.cm-header-5 {
+  color: var(--h5-color);
+  font-size: var(--h5-size);
+  font-weight: var(--h5-weight);
+}
+
+.markdown-rendered h6,
+.cm-header-6 {
+  color: var(--h6-color);
+  font-size: var(--h6-size);
+  font-weight: var(--h6-weight);
+}
+
+/* Code blocks */
+.markdown-rendered code,
+.cm-inline-code {
+  color: var(--code-normal);
+  background-color: var(--background-secondary);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-s);
+}
+
+.markdown-rendered pre code,
+.cm-s-obsidian .HyperMD-codeblock {
+  background-color: var(--background-secondary);
+  color: var(--code-normal);
+  padding: 1em;
+  border-radius: var(--radius-s);
+}
+
+/* Links */
+.markdown-rendered a,
+.cm-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.markdown-rendered a:hover,
+.cm-link:hover {
+  color: var(--link-color-hover);
+  text-decoration: underline;
+}
+
+/* External links */
+.external-link {
+  color: var(--link-external-color);
+}
+
+.external-link:hover {
+  color: var(--link-external-color-hover);
+}
+
+/* Tags */
+.tag,
+.cm-hashtag {
+  color: var(--tag-color);
+  background-color: var(--tag-background);
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius-s);
+  text-decoration: none;
+}
+
+.tag:hover,
+.cm-hashtag:hover {
+  background-color: var(--tag-background-hover);
+}
+
+/* Checkbox styling */
+.task-list-item-checkbox {
+  border-color: var(--checkbox-border-color);
+}
+
+.task-list-item-checkbox:hover {
+  border-color: var(--checkbox-border-color-hover);
+}
+
+.task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+/* Button styling */
+button {
+  background-color: var(--interactive-normal);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--input-radius);
+}
+
+button:hover {
+  background-color: var(--interactive-hover);
+  border-color: var(--background-modifier-border-hover);
+}
+
+button.mod-cta {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+
+button.mod-cta:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-active-thumb-bg);
+}
+
+/* Status bar */
+.status-bar {
+  background-color: var(--background-primary-alt);
+  border-top: 1px solid var(--background-modifier-border);
+  color: var(--text-muted);
+}
+
+/* Title bar */
+.titlebar {
+  background-color: var(--background-primary-alt);
+}
+
+/* Sidebar */
+.workspace-ribbon {
+  background-color: var(--background-primary-alt);
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.workspace-ribbon.mod-left {
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.workspace-ribbon.mod-right {
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+/* File explorer */
+.nav-file-title,
+.nav-folder-title {
+  color: var(--text-normal);
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background-color: var(--background-modifier-selected);
+  color: var(--text-normal);
+}
+
+/* Search results */
+.search-result-match {
+  background-color: var(--text-highlight-bg);
+}
+
+.search-result-match:hover {
+  background-color: var(--text-highlight-bg-active);
+}
+
+/* Graph view */
+.graph-view.color-fill {
+  color: var(--color-accent);
+}
+
+.graph-view.color-line {
+  color: var(--background-modifier-border);
+}
+
+.graph-view.color-text {
+  color: var(--text-normal);
+}
+
+.graph-view.color-fill-highlight {
+  color: var(--interactive-accent);
+}
+
+.graph-view.color-line-highlight {
+  color: var(--interactive-accent);
+}
+
+/* Settings */
+.setting-item {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+/* Modals */
+.modal {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.modal-close-button {
+  color: var(--text-muted);
+}
+
+.modal-close-button:hover {
+  color: var(--text-normal);
+}
+
+/* Prompts and suggestions */
+.prompt,
+.suggestion-container {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.suggestion-item.is-selected {
+  background-color: var(--background-modifier-selected);
+}
+
+/* Tooltips */
+.tooltip {
+  background-color: var(--background-secondary-alt);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Additional syntax highlighting for CodeMirror */
+.cm-s-obsidian span.cm-comment {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.cm-s-obsidian span.cm-string {
+  color: var(--code-string);
+}
+
+.cm-s-obsidian span.cm-number {
+  color: var(--code-value);
+}
+
+.cm-s-obsidian span.cm-keyword {
+  color: var(--code-keyword);
+  font-weight: 500;
+}
+
+.cm-s-obsidian span.cm-def {
+  color: var(--code-function);
+}
+
+.cm-s-obsidian span.cm-variable {
+  color: var(--color-red);
+}
+
+.cm-s-obsidian span.cm-variable-2 {
+  color: var(--code-function);
+}
+
+.cm-s-obsidian span.cm-variable-3,
+.cm-s-obsidian span.cm-type {
+  color: var(--color-cyan);
+}
+
+.cm-s-obsidian span.cm-property {
+  color: var(--code-property);
+}
+
+.cm-s-obsidian span.cm-operator {
+  color: var(--code-operator);
+}
+
+.cm-s-obsidian span.cm-tag {
+  color: var(--code-tag);
+}
+
+.cm-s-obsidian span.cm-attribute {
+  color: var(--code-important);
+}
+
+.cm-s-obsidian span.cm-bracket {
+  color: var(--code-punctuation);
+}
+
+.cm-s-obsidian span.cm-punctuation {
+  color: var(--code-punctuation);
+}
+
+.cm-s-obsidian span.cm-builtin {
+  color: var(--code-important);
+}
+
+/* Active line in editor */
+.CodeMirror-activeline-background {
+  background-color: var(--background-secondary);
+}
+
+/* Cursor */
+.CodeMirror-cursor,
+.cm-cursor {
+  border-left-color: var(--cursor-color);
+  border-left-width: 2px;
+}
+
+/* Selection in CodeMirror */
+.CodeMirror-selected,
+.cm-selectionBackground {
+  background-color: var(--selection-color);
+}
+
+/* Focus mode / Zen mode adjustments */
+.is-focus-mode .view-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Command palette */
+.command-palette {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.command-palette-item.is-selected {
+  background-color: var(--background-modifier-selected);
+}
+
+/* Quick switcher */
+.quick-switcher {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.quick-switcher-item.is-selected {
+  background-color: var(--background-modifier-selected);
+}
+
+/* Publish */
+.publish-site-settings {
+  background-color: var(--background-secondary);
+}
+
+/* Community themes */
+.community-theme {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.community-theme:hover {
+  border-color: var(--background-modifier-border-hover);
+}
+
+/* Community plugins */
+.community-plugin {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.community-plugin:hover {
+  border-color: var(--background-modifier-border-hover);
+}
+
+/* Callouts */
+.callout {
+  background-color: var(--background-secondary);
+  border-left: 4px solid var(--color-accent);
+}
+
+.callout-title {
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/* Different callout types */
+.callout[data-callout="info"] {
+  border-left-color: var(--color-blue);
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"] {
+  border-left-color: var(--color-cyan);
+}
+
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  border-left-color: var(--color-green);
+}
+
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  border-left-color: var(--color-yellow);
+}
+
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  border-left-color: var(--color-orange);
+}
+
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"] {
+  border-left-color: var(--color-red);
+}
+
+.callout[data-callout="example"] {
+  border-left-color: var(--color-purple);
+}
+
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  border-left-color: var(--text-muted);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--color-accent);
+  color: var(--text-muted);
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--table-header-background);
+}
+
+thead:hover {
+  background-color: var(--table-header-background-hover);
+}
+
+th {
+  border: 1px solid var(--background-modifier-border);
+  padding: 0.5em 1em;
+  font-weight: 600;
+}
+
+td {
+  border: 1px solid var(--background-modifier-border);
+  padding: 0.5em 1em;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-row-even-background);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--table-row-odd-background);
+}
+
+tr:hover {
+  background-color: var(--table-row-background-hover);
+}
+
+/* Footnotes */
+.footnotes {
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 2em;
+  padding-top: 1em;
+  color: var(--text-muted);
+}
+
+/* Embeds */
+.internal-embed {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  padding: 0.5em;
+  background-color: var(--background-secondary);
+}
+
+/* PDF embeds */
+.pdf-embed {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+}
+
+/* Audio and video */
+audio,
+video {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+}
+
+/* Loading */
+.loading {
+  color: var(--text-muted);
+}
+
+/* Empty state */
+.empty-state-title {
+  color: var(--text-normal);
+}
+
+.empty-state-text {
+  color: var(--text-muted);
+}
+
+/* Sync */
+.sync-status-icon.mod-success {
+  color: var(--color-green);
+}
+
+.sync-status-icon.mod-pending {
+  color: var(--color-yellow);
+}
+
+.sync-status-icon.mod-error {
+  color: var(--color-red);
+}
+
+/* Mobile adjustments */
+.is-mobile {
+  --h1-size: 1.8em;
+  --h2-size: 1.4em;
+  --h3-size: 1.2em;
+  --h4-size: 1.1em;
+  --h5-size: 1.05em;
+  --h6-size: 1em;
+}
+
+/* Reading mode specific */
+.markdown-reading-view {
+  padding: 2em 3em;
+}
+
+/* Source mode specific */
+.markdown-source-view {
+  font-family: var(--font-monospace);
+}
+
+/* Live preview mode */
+.markdown-source-view.is-live-preview {
+  font-family: var(--font-text);
+}
+
+/* Kanban plugin support */
+.kanban-plugin__board {
+  background-color: var(--background-primary);
+}
+
+.kanban-plugin__lane {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.kanban-plugin__item {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.kanban-plugin__item:hover {
+  border-color: var(--background-modifier-border-hover);
+}
+
+/* Calendar plugin support */
+.calendar-view {
+  background-color: var(--background-primary);
+}
+
+.calendar-day {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.calendar-day:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.calendar-day.is-selected {
+  background-color: var(--background-modifier-selected);
+}
+
+.calendar-today {
+  background-color: var(--background-modifier-selected);
+  border-color: var(--color-accent);
+}
+
+/* Excalidraw plugin support */
+.excalidraw {
+  --theme-filter: none;
+}
+
+.theme-dark .excalidraw {
+  --excalidraw-background: var(--background-primary);
+  --excalidraw-text-color: var(--text-normal);
+}
+
+.theme-light .excalidraw {
+  --excalidraw-background: var(--background-primary);
+  --excalidraw-text-color: var(--text-normal);
+}
+
+/* Mind map plugin support */
+.mindmap-node {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+.mindmap-node:hover {
+  border-color: var(--background-modifier-border-hover);
+}
+
+.mindmap-node.is-selected {
+  background-color: var(--background-modifier-selected);
+  border-color: var(--color-accent);
+}
+
+/* Dataview plugin support */
+.dataview-table {
+  background-color: var(--background-primary);
+}
+
+.dataview-table > thead > tr > th {
+  background-color: var(--table-header-background);
+  border-color: var(--background-modifier-border);
+}
+
+.dataview-table > tbody > tr:nth-child(even) {
+  background-color: var(--table-row-even-background);
+}
+
+.dataview-table > tbody > tr:nth-child(odd) {
+  background-color: var(--table-row-odd-background);
+}
+
+.dataview-table > tbody > tr:hover {
+  background-color: var(--table-row-background-hover);
+}
+
+/* Breadcrumbs plugin support */
+.breadcrumbs {
+  color: var(--text-muted);
+}
+
+.breadcrumb-item {
+  color: var(--text-muted);
+}
+
+.breadcrumb-item:hover {
+  color: var(--text-normal);
+}
+
+.breadcrumb-item.is-active {
+  color: var(--color-accent);
+}
+
+/* Sliding panes plugin support */
+.sliding-panes-plugin {
+  background-color: var(--background-primary);
+}
+
+.sliding-panes-plugin .view-header {
+  background-color: var(--background-primary-alt);
+}
+
+/* Better word count plugin support */
+.better-word-count {
+  color: var(--text-muted);
+}
+
+/* Templates plugin support */
+.templater-prompt {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.templater-prompt-input {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+/* Daily notes plugin support */
+.daily-notes-timeline {
+  background-color: var(--background-primary);
+}
+
+.daily-notes-day {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.daily-notes-day:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.daily-notes-day.is-selected {
+  background-color: var(--background-modifier-selected);
+  border-color: var(--color-accent);
+}
+
+/* File recovery plugin support */
+.file-recovery {
+  background-color: var(--background-primary);
+}
+
+.file-recovery-item {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.file-recovery-item:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+/* Minimal theme compatibility layer */
+.theme-dark.minimal-theme,
+.theme-light.minimal-theme {
+  --minimal-accent: var(--color-accent);
+  --minimal-primary: var(--color-accent);
+  --minimal-secondary: var(--color-accent-2);
+}
+
+/* Style Settings plugin support */
+.style-settings-container {
+  background-color: var(--background-primary);
+}
+
+.style-settings-item {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* Folder note plugin support */
+.folder-note-icon {
+  color: var(--color-accent);
+}
+
+/* Icon folder plugin support */
+.obsidian-icon-folder-icon {
+  color: var(--text-muted);
+}
+
+/* Outliner plugin support */
+.outliner-plugin-list-bullet {
+  color: var(--list-marker-color);
+}
+
+.outliner-plugin-list-bullet:hover {
+  color: var(--list-marker-color-hover);
+}
+
+/* Advanced tables plugin support */
+.table-editor {
+  background-color: var(--background-primary);
+}
+
+.table-editor-cell {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.table-editor-cell:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.table-editor-cell.is-selected {
+  background-color: var(--background-modifier-selected);
+}
+
+/* Obsidian git plugin support */
+.git-view {
+  background-color: var(--background-primary);
+}
+
+.git-staged {
+  color: var(--color-green);
+}
+
+.git-modified {
+  color: var(--color-yellow);
+}
+
+.git-deleted {
+  color: var(--color-red);
+}
+
+/* Periodic notes plugin support */
+.periodic-notes-calendar {
+  background-color: var(--background-primary);
+}
+
+.periodic-notes-day {
+  border: 1px solid var(--background-modifier-border);
+}
+
+.periodic-notes-day:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.periodic-notes-day.has-note {
+  background-color: var(--background-modifier-selected);
+}
+
+/* Hotkeys++ plugin support */
+.hotkeys-plus-search {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Natural language dates plugin support */
+.nld-date-suggestion {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--color-accent);
+}
+
+/* Review plugin support */
+.review-queue {
+  background-color: var(--background-primary);
+}
+
+.review-card {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Spaced repetition plugin support */
+.sr-card {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.sr-button-easy {
+  background-color: var(--color-green);
+}
+
+.sr-button-good {
+  background-color: var(--color-blue);
+}
+
+.sr-button-hard {
+  background-color: var(--color-orange);
+}
+
+.sr-button-again {
+  background-color: var(--color-red);
+}
+
+/* Journey plugin support */
+.journey-container {
+  background-color: var(--background-primary);
+}
+
+.journey-node {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.journey-node:hover {
+  border-color: var(--background-modifier-border-hover);
+}
+
+.journey-node.is-active {
+  background-color: var(--background-modifier-selected);
+  border-color: var(--color-accent);
+}
+
+/* Obsidian Publish specific */
+.published-container {
+  background-color: var(--background-primary);
+}
+
+.publish-site-header {
+  background-color: var(--background-primary-alt);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.publish-site-footer {
+  background-color: var(--background-primary-alt);
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+/* Additional UI polish */
+.workspace {
+  background-color: var(--background-primary);
+}
+
+.workspace-split {
+  background-color: var(--background-primary);
+}
+
+.workspace-leaf {
+  background-color: var(--background-primary);
+}
+
+.workspace-tabs {
+  background-color: var(--background-primary-alt);
+}
+
+.workspace-tab-container {
+  background-color: var(--background-primary-alt);
+}
+
+/* Final touches for better readability */
+.markdown-preview-view {
+  padding: 2em 3em;
+  line-height: 1.6;
+}
+
+.markdown-preview-view p {
+  margin-bottom: 1em;
+}
+
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.markdown-preview-view li {
+  margin-bottom: 0.25em;
+}
+
+/* Ensure consistent font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .markdown-preview-view,
+  .markdown-reading-view {
+    padding: 1em 1.5em;
+  }
+  
+  .workspace-drawer {
+    border: none;
+  }
+  
+  .workspace-drawer.mod-left {
+    border-right: 1px solid var(--background-modifier-border);
+  }
+  
+  .workspace-drawer.mod-right {
+    border-left: 1px solid var(--background-modifier-border);
+  }
+}
+
+/* Print styles */
+@media print {
+  .theme-dark,
+  .theme-light {
+    --background-primary: white;
+    --text-normal: black;
+    --background-modifier-border: #ccc;
+  }
+  
+  .workspace-ribbon,
+  .workspace-tabs,
+  .status-bar,
+  .titlebar {
+    display: none;
+  }
+}
+
+/* Accessibility improvements */
+.is-focused {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .theme-dark {
+    --background-modifier-border: #666;
+    --text-muted: #aaa;
+  }
+  
+  .theme-light {
+    --background-modifier-border: #999;
+    --text-muted: #555;
+  }
+}
+
+/* Custom classes for user styling */
+.manganese-accent {
+  color: var(--color-accent);
+}
+
+.manganese-highlight {
+  background-color: var(--text-highlight-bg);
+  padding: 0.1em 0.2em;
+  border-radius: var(--radius-s);
+}
+
+.manganese-box {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  padding: 1em;
+  border-radius: var(--radius-s);
+  margin: 1em 0;
+}
+
+/* End of Manganese Theme */
