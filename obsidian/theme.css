@@ -158,10 +158,10 @@
   --color-pink: #ff9248;
   
   /* Links */
-  --link-color: #4385be;
-  --link-color-hover: #4385be;
-  --link-external-color: #4385be;
-  --link-external-color-hover: #4385be;
+  --link-color: #d0724c;
+  --link-color-hover: #b8634e;
+  --link-external-color: #d0724c;
+  --link-external-color-hover: #b8634e;
   --link-unresolved-color: #878e98;
   --link-unresolved-opacity: 0.7;
   
@@ -191,23 +191,23 @@
   
   /* Titles and headings */
   --h1-color: #ff9248;
-  --h2-color: #4385be;
-  --h3-color: #879a39;
-  --h4-color: #3aa99f;
-  --h5-color: #d0a215;
-  --h6-color: #d14d41;
+  --h2-color: #e8824a;
+  --h3-color: #d0724c;
+  --h4-color: #b8634e;
+  --h5-color: #a05450;
+  --h6-color: #884552;
   --h1-size: 2em;
   --h2-size: 1.6em;
   --h3-size: 1.37em;
   --h4-size: 1.25em;
   --h5-size: 1.12em;
   --h6-size: 1.03em;
-  --h1-weight: 700;
-  --h2-weight: 600;
-  --h3-weight: 600;
-  --h4-weight: 600;
-  --h5-weight: 600;
-  --h6-weight: 600;
+  --h1-weight: normal;
+  --h2-weight: normal;
+  --h3-weight: normal;
+  --h4-weight: normal;
+  --h5-weight: normal;
+  --h6-weight: normal;
   
   /* Editor */
   --cursor-color: #ff9248;
@@ -301,10 +301,10 @@
   --color-pink: #ff7900;
   
   /* Links */
-  --link-color: #3a94c5;
-  --link-color-hover: #3a94c5;
-  --link-external-color: #3a94c5;
-  --link-external-color-hover: #3a94c5;
+  --link-color: #cc6504;
+  --link-color-hover: #b35b06;
+  --link-external-color: #cc6504;
+  --link-external-color-hover: #b35b06;
   --link-unresolved-color: #6f6e69;
   --link-unresolved-opacity: 0.7;
   
@@ -334,23 +334,23 @@
   
   /* Titles and headings */
   --h1-color: #ff7900;
-  --h2-color: #3a94c5;
-  --h3-color: #66800b;
-  --h4-color: #3f8687;
-  --h5-color: #966307;
-  --h6-color: #af3029;
+  --h2-color: #e66f02;
+  --h3-color: #cc6504;
+  --h4-color: #b35b06;
+  --h5-color: #995108;
+  --h6-color: #80470a;
   --h1-size: 2em;
   --h2-size: 1.6em;
   --h3-size: 1.37em;
   --h4-size: 1.25em;
   --h5-size: 1.12em;
   --h6-size: 1.03em;
-  --h1-weight: 700;
-  --h2-weight: 600;
-  --h3-weight: 600;
-  --h4-weight: 600;
-  --h5-weight: 600;
-  --h6-weight: 600;
+  --h1-weight: normal;
+  --h2-weight: normal;
+  --h3-weight: normal;
+  --h4-weight: normal;
+  --h5-weight: normal;
+  --h6-weight: normal;
   
   /* Editor */
   --cursor-color: #ff7900;
@@ -359,16 +359,16 @@
 
 /* Common Styles */
 body {
-  /* Border radius - keeping the sharp edges from original */
-  --radius-s: 0px;
-  --radius-m: 0px;
-  --radius-l: 0px;
-  --input-radius: 0px;
-  --tab-radius-active: 0px;
-  --checkbox-radius: 0px;
-  --toggle-radius: 0px;
-  --toggle-thumb-radius: 0px;
-  --slider-thumb-radius: 0px;
+  /* Border radius - restored to Obsidian defaults for rounded interface */
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+  --input-radius: 6px;
+  --tab-radius-active: 6px;
+  --checkbox-radius: 3px;
+  --toggle-radius: 18px;
+  --toggle-thumb-radius: 18px;
+  --slider-thumb-radius: 18px;
   
   /* Font */
   --font-interface: "Fira Code VF", "Fira Code", "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
@@ -383,12 +383,10 @@ body {
   display: none;
 }
 
-/* SVG styling - sharp corners */
+/* SVG styling - restored to rounded defaults */
 svg * {
-  stroke-linecap: square;
-  stroke-linejoin: miter;
-  rx: 0;
-  ry: 0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* Menu styling */
@@ -437,6 +435,8 @@ svg * {
   font-size: var(--h3-size);
   font-weight: var(--h3-weight);
   font-family: var(--font-heading);
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
 }
 
 .markdown-rendered h4,
@@ -445,6 +445,8 @@ svg * {
   font-size: var(--h4-size);
   font-weight: var(--h4-weight);
   font-family: var(--font-heading);
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
 }
 
 .markdown-rendered h5,
@@ -453,6 +455,8 @@ svg * {
   font-size: var(--h5-size);
   font-weight: var(--h5-weight);
   font-family: var(--font-heading);
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
 }
 
 .markdown-rendered h6,
@@ -461,6 +465,8 @@ svg * {
   font-size: var(--h6-size);
   font-weight: var(--h6-weight);
   font-family: var(--font-heading);
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
 }
 
 /* Code blocks */
@@ -567,7 +573,7 @@ button.mod-cta:hover {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-bg);
-  border-radius: 0px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -704,7 +710,7 @@ button.mod-cta:hover {
 
 .cm-s-obsidian span.cm-keyword {
   color: var(--code-keyword);
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .cm-s-obsidian span.cm-def {
@@ -827,7 +833,9 @@ button.mod-cta:hover {
 
 .callout-title {
   color: var(--text-normal);
-  font-weight: 600;
+  font-weight: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
 }
 
 /* Different callout types */
@@ -907,7 +915,9 @@ thead:hover {
 th {
   border: 1px solid var(--background-modifier-border);
   padding: 0.5em 1em;
-  font-weight: 600;
+  font-weight: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
 }
 
 td {
@@ -1481,6 +1491,30 @@ select:focus-visible {
   padding: 1em;
   border-radius: var(--radius-s);
   margin: 1em 0;
+}
+
+/* Typography emphasis - Doves Type alternative to bold */
+/* Since Doves Type doesn't have Bold weights, use small-caps for emphasis */
+strong, b, 
+.markdown-rendered strong, 
+.markdown-rendered b,
+.cm-strong {
+  /* Remove default bold styling */
+  font-weight: normal !important;
+  
+  /* Apply small caps for typographically appropriate emphasis */
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+/* Ensure emphasis within links is properly styled */
+a strong, a b, strong a, b a,
+.markdown-rendered a strong, 
+.markdown-rendered a b {
+  /* Preserve the small caps styling */
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  color: inherit;
 }
 
 /* End of Manganese Theme */
