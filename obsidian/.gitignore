@@ -1,0 +1,4 @@
+fonts/*.woff2
+fonts/*.woff
+fonts/*.ttf
+!fonts/
