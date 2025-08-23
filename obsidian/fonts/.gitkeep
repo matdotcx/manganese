@@ -1,2 +1,19 @@
 # This file ensures the fonts directory is tracked by git
 # Font files are excluded via .gitignore but users can add their own font files here
+
+# FONT LICENSING AND SOURCES
+# The Manganese theme is configured to use these specific fonts:
+#
+# Fira Code (Open Source)
+# - Available at: https://github.com/tonsky/FiraCode
+# - License: SIL Open Font License 1.1
+# - Files needed: FiraCode-Light.woff2, FiraCode-Regular.woff2, FiraCode-Medium.woff2,
+#   FiraCode-SemiBold.woff2, FiraCode-Bold.woff2, FiraCode-VF.woff2
+#
+# Doves Type (Commercial)
+# - Available at: https://typespec.co.uk/doves-type/
+# - License: Commercial license required
+# - Files needed: DovesTypeText-Regular.woff2, DovesTypeHeadline-Regular.woff2
+#
+# NOTE: These are the author's personal font choices. You may substitute with
+# your own preferred fonts or use the fallback fonts defined in the theme.
