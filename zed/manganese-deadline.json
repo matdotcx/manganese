@@ -1,12 +1,21 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
   "name": "Manganese Deadline",
-  "author": "Deadline-inspired Manganese theme",
+  "author": "matdotcx",
   "themes": [
     {
       "name": "Manganese Deadline Dark",
       "appearance": "dark",
       "style": {
+        "accents": [
+          "#ff9248",
+          "#d14d41",
+          "#879a39",
+          "#d0a215",
+          "#4385be",
+          "#3aa99f",
+          "#ff9248"
+        ],
         "border": "#323232",
         "border.variant": "#393939",
         "border.focused": "#ff924880",
@@ -84,14 +93,6 @@
         "terminal.ansi.bright_magenta": "#ff9248",
         "terminal.ansi.bright_cyan": "#3aa99f",
         "terminal.ansi.bright_white": "#e8e8e8",
-        "terminal.ansi.dim_black": "#141414",
-        "terminal.ansi.dim_red": "#913330",
-        "terminal.ansi.dim_green": "#5a6627",
-        "terminal.ansi.dim_yellow": "#8a6b0e",
-        "terminal.ansi.dim_blue": "#2d5a7e",
-        "terminal.ansi.dim_magenta": "#aa6130",
-        "terminal.ansi.dim_cyan": "#28706a",
-        "terminal.ansi.dim_white": "#9a9a9a",
         "link_text.hover": "#4385be",
         "conflict": "#d0a215",
         "conflict.background": "#d0a21510",
@@ -206,16 +207,6 @@
           "keyword": {
             "color": "#ff9248",
             "font_style": null,
-            "font_weight": 500
-          },
-          "link_text": {
-            "color": "#4385be",
-            "font_style": "underline",
-            "font_weight": null
-          },
-          "link_uri": {
-            "color": "#3aa99f",
-            "font_style": "underline",
             "font_weight": null
           },
           "number": {
@@ -315,6 +306,15 @@
       "name": "Manganese Deadline Light",
       "appearance": "light",
       "style": {
+        "accents": [
+          "#ff7900",
+          "#af3029",
+          "#66800b",
+          "#966307",
+          "#3a94c5",
+          "#3f8687",
+          "#ff7900"
+        ],
         "border": "#e6e3de",
         "border.variant": "#dad7d2",
         "border.focused": "#ff790080",
@@ -514,16 +514,6 @@
           "keyword": {
             "color": "#ff7900",
             "font_style": null,
-            "font_weight": 500
-          },
-          "link_text": {
-            "color": "#3a94c5",
-            "font_style": "underline",
-            "font_weight": null
-          },
-          "link_uri": {
-            "color": "#3f8687",
-            "font_style": "underline",
             "font_weight": null
           },
           "number": {
@@ -619,5 +609,6 @@
         }
       }
     }
-  ]
+  ],
+  "id": "pw_2IQmRdrMJVIc76pyud"
 }
