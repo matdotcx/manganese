@@ -1,11 +1,8 @@
 # Manganese for Claude Code
 
-Two custom themes for [Claude Code](https://claude.com/claude-code):
+The same ink, paper and grease pencil, now in Claude Code.
 
-- **Manganese Light** (`manganese-light.json`), for a paper background (`#f8f5f0`)
-- **Manganese Dark** (`manganese-dark.json`), for a charcoal background (`#232323`)
-
-They pair with the Ghostty themes in `../ghostty`.
+Manganese Light is set on Paper Light (`#f8f5f0`) and Manganese Dark on Charcoal (`#232323`), so both sit naturally alongside the Ghostty themes next door.
 
 ## Install
 
@@ -14,20 +11,20 @@ mkdir -p ~/.claude/themes
 cp manganese-light.json manganese-dark.json ~/.claude/themes/
 ```
 
-Then run `/theme` in Claude Code and pick Manganese Light or Manganese Dark. You can also set it in `~/.claude/settings.json`:
+Run `/theme` and pick Manganese Light or Manganese Dark, or set it in `~/.claude/settings.json`:
 
 ```json
 "theme": "custom:manganese-light"
 ```
 
-Claude Code's "Auto (match terminal)" option only switches between its built-in themes, so use `/theme` to move between the two.
+"Auto (match terminal)" only switches between Claude Code's built-in themes, so changing moods is done by hand with `/theme`.
 
-## Colour notes
+## Small compromises
 
-Colours follow [TECHNICAL.md](../TECHNICAL.md) and the Ghostty palettes. A few roles use a neighbouring colour so text stays readable:
+Everything comes from [TECHNICAL.md](../TECHNICAL.md), with three exceptions where legibility won:
 
-- In the light theme, Claude's spinner text uses Muted `#cc6100`. Deadline orange `#ff7900` is kept for the shimmer and the mascot.
-- In the light theme, plan mode uses a darker teal, `#00807a`, than Ghostty's `#00998f`.
-- In the dark theme, dimmed text uses a warm grey, `#999590`, instead of Gray Light `#808080`.
+- Deadline orange (`#ff7900`) is too bright to read as text on paper, so the light theme's spinner text uses Muted (`#cc6100`). The full orange stays on the shimmer and on Clawd.
+- Ghostty's teal (`#00998f`) washes out on cream, so plan mode in the light theme uses a deeper `#00807a`.
+- Gray Light (`#808080`) falls just short of AA on Charcoal, so dimmed text in the dark theme uses a warm `#999590`.
 
-The rainbow "ultrathink" colours, the purple and yellow subagent colours, and the Chrome indicator come from Claude Code's built-in `light` and `dark` themes.
+The ultrathink rainbow, the purple and yellow subagent colours and the Chrome indicator keep Claude Code's defaults. A rainbow should stay a rainbow.
